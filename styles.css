@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -18,22 +17,26 @@
     list-style: none;
 }
 :root {
-    --primaryColor: #333;
+    --primaryColor: #666;
     --secondaryColor: #eee;
     --thirdColor: #fff;
     --fourthColor: #50e261;
     --fifthColor: #9ee4a5;
-    --sixthColor: #eee;
+    --sixthColor: #bbb;
     --darkgrayColor: #333;
     --blackColor: #000;
     --backgroundColor: #eee;
+    --maximum-width: 1350px;
 }
 html {
     font-size: 62.5%;
+    background-color: #fff;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Play', sans-serif;
     background-color: var(--secondaryColor);
+    max-width: var(--maximum-width);
+    margin: 0 auto;
     overflow-x: hidden;
 }
 /* the head line style of the sections  */
@@ -45,7 +48,8 @@ body {
 }
 .header-container {
     width: 100%;
-    height: 18vh;
+    max-width: var(--maximum-width);
+    height: 15rem;
     background-color: var(--primaryColor);
     border-bottom: 2px solid var(--fifthColor);
     position: fixed;
@@ -65,25 +69,27 @@ body {
     padding: 0 .5rem;
 }
 .top-menu {
-    margin-left: 20rem;
+    margin-left: 10rem;
 }
 .top-menu a {
-    padding: 0 2rem;
+    font-family: 'Play', sans-serif;
+    padding: 0 .5rem;
     font-size: 1.2rem;
+    letter-spacing: .1rem;
     color: var(--secondaryColor);
 }
 .top-menu a:hover {
     cursor: default;
 }
 .language {
-    margin-right: 20rem;
+    margin-right: 10rem;
 }
 .language a {
-    padding: 0 .5rem 
+    padding: 0 1rem 
 }
 .language a img {
-    width: 2rem;
-    height: 1.2rem;
+    width: 2.2rem;
+    height: 1.3rem;
 }
 .nav-container {
     display: flex;
@@ -95,10 +101,10 @@ body {
     height: 10vh;
 }
 .header h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 2.8rem;
     letter-spacing: .2rem;
-   
+    margin-top: 2rem;
     /*
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -108,7 +114,7 @@ body {
     text-align: center;
 }
 .header h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: .5rem;
@@ -123,8 +129,6 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 4rem;
-   /* margin-bottom: 1rem; */
 }
 nav li a {
     margin: 0 2rem;
@@ -132,14 +136,16 @@ nav li a {
 }
 nav a {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     padding: 1rem 2rem;
     border-radius: .5rem;
     text-transform: uppercase;
     color: var(--secondaryColor);
+    letter-spacing: .2rem;
     transition: color .5s;   
+  
 }
 nav a::before {
     content:''; 
@@ -190,29 +196,15 @@ nav a:hover::before {
 
 #img-wrapper {
     position: absolute;
-    top: 17vh;
+    top: 15vh;
     left: 0;
     width: 100%;
     height: 75rem;  
-    background-image: url(images/pic-1.jpg);
+    background-image: url(../images/pic-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: slide 20s linear infinite; 
-    z-index: -1;
-}
-@keyframes slide {
-    0% {
-        background-image: url(images/pic-1.jpg);
-    }
-    25% {
-        background-image: url(images/pic-2.jpg);
-    }
-    50% {
-        background-image: url(images/pic-3.jpg);
-    }
-    75% {
-        background-image: url(images/funchal-2.jpg);
-    }
+    animation: none; 
+    transition: 1s;  
 }
 /*  this is the fade in text    */
 .banner {
@@ -222,7 +214,7 @@ nav a:hover::before {
     right: 20%;
 }
 .banner p {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 4rem;
     color:var(--thirdColor);
     letter-spacing: .1rem;
@@ -230,8 +222,8 @@ nav a:hover::before {
     padding: 2rem 2rem;
     text-align: center;
     text-transform: uppercase;
-    opacity:0;
-    animation: fade-in 1.5s .7s forwards;
+    opacity:0; 
+    animation: fade-in 1.5s .7s forwards; 
 }
 @keyframes fade-in {
     0% {
@@ -254,6 +246,7 @@ nav a:hover::before {
     width: 100%;
     height: .1rem;
 }
+/*
 .about::after {
     content: '';
     position: absolute;
@@ -261,11 +254,12 @@ nav a:hover::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(images/bg-2.jpg);
+    background-image: url(../images/bg-2.jpg);
     filter: grayscale(100%);
     z-index: -3;
     opacity: .2;
 }
+*/
 .about-container {
     width: 70%;
     max-width: 900px;
@@ -276,8 +270,8 @@ nav a:hover::before {
     margin-bottom: 5rem;
 }
 .head-line h1{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-family: 'Play', sans-serif;
+    font-weight: 400;
     font-size: 2.2rem;
     letter-spacing: .4rem;
     text-transform: uppercase;
@@ -289,8 +283,9 @@ nav a:hover::before {
     align-items: center;
 }
 .about-container p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Play', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
     letter-spacing: .1rem;
     margin-bottom: 2rem;
     color: var(--darkgrayColor);
@@ -320,6 +315,7 @@ nav a:hover::before {
     padding-top: 10rem;
     position: relative;
 }
+/*
 .section-services::after {
     content: '';
     position: absolute;
@@ -327,11 +323,12 @@ nav a:hover::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(images/bg-2.jpg);
+    background-image: url(../images/bg-2.jpg);
     filter: grayscale(100%);
     z-index: -3;
     opacity: .2;
 }
+*/
 .services-container {
     width: 80%;
     margin: 0 auto;
@@ -354,10 +351,10 @@ nav a:hover::before {
 }
 .services-container .service button {
     position: absolute;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     letter-spacing: .2rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     margin-top: 2rem;
     background-color: transparent;
     border-radius: .5rem;
@@ -370,7 +367,7 @@ nav a:hover::before {
 }
 .services-container .service button:hover {
     color: var(--fourthColor);
-    font-weight: 600;
+    font-weight: 400;
     text-shadow:  .1rem .1rem .2rem rgba(0, 0, 0, .5);
 }
 .services-container div {
@@ -382,7 +379,7 @@ nav a:hover::before {
    opacity: 1;
 }
 .services-container div h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 2.2rem;
     font-weight: 400;
     letter-spacing: .3rem;
@@ -391,17 +388,17 @@ nav a:hover::before {
 }
 
 .services-container div h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: .1rem;
     padding: 1rem 0;
     color: var(--whiteColor);
 }
 .services-container div p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 400;
     letter-spacing: .1rem;
     padding: 2rem;
     color: var(--secondaryColor);
@@ -439,14 +436,14 @@ nav a:hover::before {
     border-bottom: 1px solid var(--primaryColor);
 }
 .modal-header .title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: .2rem;
     text-transform: uppercase;
 }
 .modal-header .close-button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     cursor: pointer;
     border: none;
     outline: none;
@@ -458,13 +455,13 @@ nav a:hover::before {
     padding: 2rem 2rem; 
 }
 .modal-body h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 .modal-body p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.2rem;
     line-height: 2rem;
 }
@@ -503,7 +500,7 @@ nav a:hover::before {
     align-items: center;
     flex-direction: column; 
 }
-
+/*
 .section-4::after {
     content: '';
     position: absolute;
@@ -511,11 +508,12 @@ nav a:hover::before {
     left: 0;
     right: 0;
     bottom: -5rem;
-    background-image: url(images/bg-2.jpg);
+    background-image: url(../images/bg-2.jpg);
     filter: grayscale(100%);
     z-index: -3;
     opacity: .2;
 }
+*/
 .contacts-container {
     width: 80%;
     max-width: 80rem;
@@ -532,14 +530,14 @@ nav a:hover::before {
 .address,
 .phones,
 .email {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     letter-spacing: .2rem;   
 }
 .address h2,
 .phones h2,
 .email h2 {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     color: var(--primaryColor);
     padding-bottom: 1rem;
@@ -548,7 +546,7 @@ nav a:hover::before {
 .phones h3,
 .email h3 {
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--darkgrayColor);
 }
 .phones h3 span img {
@@ -556,10 +554,7 @@ nav a:hover::before {
     height: 1.2rem;
     margin-left: 1rem;
 }
-.phones #phone-1 span #img-1 {
-    margin-left: 1.7rem;
-}
-  
+
 .contact-form-container {
     width: 80%;
     max-width: 80rem;
@@ -575,19 +570,19 @@ nav a:hover::before {
 
 .contact-form-container h3 {
     text-align: left;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     margin-top: 5rem;
     color: var(--primaryColor);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: .5rem;  
     text-transform: uppercase;
   
 }
 .contact-form-container p {
     text-align: left;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.5rem;
     line-height: 2.5rem;
     margin-bottom: 2rem;
@@ -605,9 +600,9 @@ nav a:hover::before {
     width: 2rem;
 }
 .form-group label {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: .2rem;
     opacity: 0;
 }
@@ -638,7 +633,7 @@ button[type="clear"] {
     margin-top: 1rem;
     margin-right: 1rem;
     padding: 1rem 2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -659,7 +654,7 @@ button[type="submit"] {
     outline: none;
     margin-top: 1rem;
     padding: 1rem 2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -680,7 +675,7 @@ button[type="submit"]:hover {
     width: 90%;
     max-width: 50rem;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.5rem;
     padding: 1rem;
     margin: 0 auto;
@@ -722,16 +717,16 @@ button[type="submit"]:hover {
 
 .footer {
     width: 100%;
-    height: 14vh;
+    height: 12rem;
     background-color: var(--primaryColor);
     border-top: 2px solid var(--fifthColor);
 }
 .footer h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 1.3rem;
     letter-spacing: .3rem;    
-    height: 5rem;
-    font-weight: 300;
+    height: 2rem;
+    font-weight: 400;
     color: var(--secondaryColor);
     margin: auto 5rem;
     padding: 5rem;
@@ -765,36 +760,14 @@ button[type="submit"]:hover {
     /*************************************************/
     /*      hier starten die Media Queries           */
     /*************************************************/
-    /*                  1450 PX                      */
+
     /*************************************************/
-        @media only screen and (max-width: 1450px) {
-        
-        /* header styles  */
+    /*        1200 PX                                */
+    /*************************************************/
+        @media only screen and (max-width: 1200px)  {
             .top-menu {
-                margin-left: 0;
-                transition: margin-left .7s;
-            } 
-        /* services section  */
-            .header h1 {
-                font-size: 2.8rem;
+                margin-left: 2rem;
             }
-            .header h2 {
-                font-size: 1.3rem;
-            }
-            .services-container {
-                width: 90%;
-            }
-            .services-container div h2 {
-                font-size: 2.2rem;
-            }
-            .services-container div p {
-                font-size: 1.3rem;   
-            }  
-        }
-        /*************************************************/
-        /*        1250 PX                                */
-        /*************************************************/
-        @media only screen and (max-width: 1250px)  {
             .header h1 {
                 font-size: 2.8rem;
             }
@@ -808,10 +781,10 @@ button[type="submit"]:hover {
               margin-top: -20vh;
             }
             .about-container {
-                height: 50rem;
+                height: 55rem;
             }
             .language {
-                margin-right: 3rem;
+                margin-right: 2rem;
             }
             .section-services {
                 width: 100%;
@@ -825,22 +798,7 @@ button[type="submit"]:hover {
                 grid-gap: 1rem 1rem;      
             }
         }
-        /* stellt den screen size wieder auf ueber 1200px mit .5 s transition   */
-        @media only screen and (min-width: 1200px) {
-            .top-menu {
-                margin-left: 30;
-                transition: margin-left .7s;
-            } 
-            .about {
-                height: 75rem;
-            }
-            #about {
-              margin-top: -20vh;
-            }
-            .about-container {
-                height: 50rem;
-            }
-        }
+       
          /*        1080 PX                                */
         @media only screen and (max-width: 1080px) {
             .about {
@@ -864,16 +822,10 @@ button[type="submit"]:hover {
             .language {
                 margin-right: 1rem;
             }
-            .horizontal-line {
-                display: none;
-            }
             .top-line {
                 flex-direction: column;
                 justify-content: space-around;
                 height: 6rem;
-            }
-            .nav-container {
-                height: rem;
             }
         }
         /************************************************/
@@ -888,13 +840,16 @@ button[type="submit"]:hover {
               margin-top: -20vh;
             }
             .header-container {
-                height: 20rem;;
+                height: 20rem;
             }
             .header h1 {
                 font-size: 2rem;
             }
             .header h2 {
                 font-size: 1rem;
+            }
+            nav ul {
+                padding-top: 3rem;
             }
             .nav-links {
                 margin-bottom: 4rem;
@@ -936,10 +891,8 @@ button[type="submit"]:hover {
         /* *************************************** */
         /* here starts the 900 media query         */
         /*******************************************/
+
         @media screen and (max-width: 900px) {
-        /*************************************************/    
-        /*  the burger is displayed under 900px width    */
-        /*************************************************/
             .burger {
                 display:block;
                 position: fixed;
@@ -953,6 +906,10 @@ button[type="submit"]:hover {
             }
             .burger:hover div {
                 background-color: var(--fifthColor);
+            }
+            .language a img {
+                width: 3rem;
+                height: 2rem;
             }
             .nav-links {
                 position: absolute;
@@ -1011,10 +968,10 @@ button[type="submit"]:hover {
                     transform: rotate(45deg) translate(-5px, -6px);
             }
             .header-container {
-                position:initial;
                 height: 20rem;
             }
             .header h1 {
+                margin-top: 0;
                 font-size: 2rem;
                 color: var(--secondaryColor);
             }
@@ -1055,6 +1012,11 @@ button[type="submit"]:hover {
             .section-services {
                 height: 125rem;
                 padding-top: 10vh;
+            }
+            .services-container .service button {
+                letter-spacing: .1rem;
+                font-size: 1.3rem;
+                font-weight: 500;
             }
             .contact-section {
                 padding-top: 5rem;
@@ -1129,15 +1091,37 @@ button[type="submit"]:hover {
         @media only screen 
         and (max-width: 500px)
         /*and (max-height: 800px)*/
-        and (orientation: portrait)   {
-            .top-menu a{
-                font-size: 1rem;
-            }          
+        and (orientation: portrait)   { 
+
+            .section-1 {
+                height: 95rem;
+            }
             .header-container {
-                position:initial;
-                height: 20rem;
+                position:relative;
+                height: 35rem;
+                padding-top: 8rem;
+                background-color: var(--primaryColor);
+            }
+            .top-line {
+                position: relative;
+                background-color: var(--primaryColor);
+                height: 15rem;
+                
+            }
+            .top-menu {
+               margin: 0;
+               border-top: 1px solid var(--secondaryColor);
+               padding-top: 1rem;
+            }
+            .top-menu a {
+                font-size: 1.1rem;
+                line-height: 2rem;
+            }
+            .header- {
+                height: 10rem;
             }
             .header h1 {
+                margin-top: 1rem;
                 font-size: 2rem;
                 color: var(--secondaryColor);
             }
@@ -1148,38 +1132,78 @@ button[type="submit"]:hover {
             .banner p {
                 font-size: 2rem;
             }
-            .nav-links li a {
-                font-size: 1rem;
-            }
-            #img-wrapper {
+            
+            .nav-links {
+                position: absolute;
+                right: 0px;
+                height: 30rem;
+                top: 35rem;
+                background-color: var(--primaryColor);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 width: 100%;
-                height: 80rem;  
-                background-image: url(images/pic-1.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in;
+                border-bottom: 3px solid var(--fifthColor);
+            }
+            
+            .nav-links li a {
+                font-size: 1.5rem;
+            }
+            .nav-active {
+                transform: translateX(0%);
+            }
+            @keyframes navLinkFade {
+                from{
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1; 
+                    transform: translateX(0px);
+                }
+            }   
+            #img-wrapper {
+                animation: none;
+            }
+            .language a img {
+                width: 3rem;
+                height: 2rem;
+            }
+            .banner p {
+                display: none;
             }
             .about {
                 width: 100%;
-                height: 105rem; 
-                padding-top: 25rem;
+                height: 85rem; 
+                margin-top: 0;
+                padding-top: 5rem;
+                background-color: var(--secondaryColor);
             }
             .about::after {
                 background-image: none;
                 background-color: var(--secondaryColor);
             }
+            /*
             .about-header {
                 height: 65rem;
             }
+            */
             #about {
               margin-top: -20vh;
             }
             .about-container {
                 height: 55rem;
             }
+            #section-services {
+                margin-top: 20rem;
+            }
             .section-services {
                 width: 100%;
                 height: 230rem;
                 padding-top: 5rem;
+                background-color: var(--secondaryColor);
             }
             .section-services::after {
                 background-image: none;
@@ -1191,6 +1215,11 @@ button[type="submit"]:hover {
                 margin: 0 auto;
                 display: grid;
                 grid-template-columns: 1fr;
+            }
+            .services-container .service button {
+                letter-spacing: .1rem;
+                font-size: 1.3rem;
+                font-weight: 500;
             }
             .contacts-container {
                 display: flex;
@@ -1232,12 +1261,13 @@ button[type="submit"]:hover {
             }
             .contact-section{
                 width: 100%;
-                height: 140rem;
+                height: 90rem;
                 padding-top: 0;
+                background-color: var(--secondaryColor);
             }
             .section-4 {
                 width: 100%;
-                height: 95rem;
+                height: 90rem;
             }
             .section-4::after {
                 background-image: none;
@@ -1245,11 +1275,13 @@ button[type="submit"]:hover {
             }
             .contacts-container {
                 padding-top: 0;
+             
             }
             .inner-form {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                
             }
             .form-group input,
             .form-group textarea {
@@ -1270,7 +1302,16 @@ button[type="submit"]:hover {
                 padding: 1rem 2rem;
             }
             .footer {
-                height: 14rem;  /*  18vh  */
+                height: 10rem;  /*  18vh  */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer h3 {
+                margin: 0;
+                padding: 0;
+                width:max-content;
+                height: max-content;
             }
             .scroll-btn {
                 display: none;
@@ -1285,11 +1326,14 @@ button[type="submit"]:hover {
         and (max-width: 800px)
         and (orientation: landscape)    
         {
+            .top-menu {
+                margin-left: 5rem;
+            }
             .nav-links {
-                top: 7rem;
+                top: 8rem;
             }
             .header-container {
-                position:initial;
+                position: relative;
                 height: 8rem;
             }
             .top-line {
@@ -1297,10 +1341,6 @@ button[type="submit"]:hover {
             }
             .top-menu a {
                 font-size: 1rem;
-            }
-            
-            .header-container {
-                position:initial;
             }
             .header h1 {
                 font-size: 2rem;
@@ -1310,11 +1350,14 @@ button[type="submit"]:hover {
                 font-size: 1rem;
                 color: var(--secondaryColor);
             }
+            #img-wrapper {
+                animation: none;
+            }
             .banner p {
-                font-size: 2rem;
+                display: none;
             }
             .nav-links li a {
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
             .about {
                 position: relative;  
@@ -1353,6 +1396,11 @@ button[type="submit"]:hover {
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 1rem 1rem;
             }
+            .services-container .service button {
+                letter-spacing: .1rem;
+                font-size: 1.3rem;
+                font-weight: 500;
+            }
             .modal { 
                 position: fixed;
                 top: 50%;
@@ -1376,7 +1424,7 @@ button[type="submit"]:hover {
                 border-bottom: 1px solid var(--primaryColor);
             }
             .modal-header .title {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Play', sans-serif;
                 font-size: 1.6rem;
                 font-weight: 600;
                 letter-spacing: .2rem;
@@ -1389,11 +1437,11 @@ button[type="submit"]:hover {
                 padding: 2rem 2rem;            
             }
             .modal-body h3 {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Play', sans-serif;
                 font-size: 1.2rem;
             }
             .modal-body p {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Play', sans-serif;
                 letter-spacing: .1rem;
                 font-size: 1.2rem;
                 line-height: 1.6rem;
@@ -1418,7 +1466,10 @@ button[type="submit"]:hover {
                 padding-top: 0;
             }
             .footer {
-                height: 12rem;
+                height: 10rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
         
