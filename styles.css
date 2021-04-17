@@ -799,7 +799,7 @@ button[type="submit"]:hover {
         /************************************************/
         @media only screen and (max-width: 950px) {
             body {
-                overflow-x: hidden!important;
+                overflow: hidden;
             }
 
             .about {
@@ -872,7 +872,7 @@ button[type="submit"]:hover {
 
         @media screen and (max-width: 900px) {
             body {
-                overflow-x: hidden!important;
+                overflow: hidden;
             }
             .burger {
                 display:block;
@@ -1089,7 +1089,7 @@ button[type="submit"]:hover {
         and (orientation: portrait)   { 
 
             body {
-                overflow-x: hidden!important;
+                overflow: hidden;
             }
 
             .section-1 {
@@ -1314,7 +1314,7 @@ button[type="submit"]:hover {
         and (orientation: landscape)    
         {
             body {
-                overflow-x: hidden!important;
+                overflow: hidden;
             }
             .top-menu {
                 margin-left: 5rem;
