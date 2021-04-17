@@ -199,8 +199,23 @@ nav a:hover::before {
     background-image: url(./images/pic-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: none; 
+    animation: slide 30s linear infinite; 
     transition: 1s;  
+}
+
+@keyframes slide {
+    0% {
+        background-image: url(./images/pic-1.jpg);
+    }
+    25% {
+        background-image: url(./images/pic-2.jpg);
+    }
+    50% {
+        background-image: url(./images/pic-3.jpg);
+    }
+    75% {
+        background-image: url(./images/funchal-2.jpg);
+    }
 }
 /*  this is the fade in text    */
 .banner {
