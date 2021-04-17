@@ -904,6 +904,7 @@ button[type="submit"]:hover {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                display: none;
                 width: 100%;
                 transform: translateX(100%);
                 transition: transform 0.3s ease-in;
@@ -930,6 +931,8 @@ button[type="submit"]:hover {
             }
             .nav-active {
                 transform: translateX(0%);
+                display: block;
+                text-align: center;
             }
             @keyframes navLinkFade {
                 from{
@@ -1142,6 +1145,7 @@ button[type="submit"]:hover {
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+                display: none;
                 transform: translateX(100%);
                 transition: transform 0.3s ease-in;
                 border-bottom: 1px solid var(--fifthColor);
@@ -1152,6 +1156,8 @@ button[type="submit"]:hover {
             }
             .nav-active {
                 transform: translateX(0%);
+                display: block;
+                text-align: center;
             }
             @keyframes navLinkFade {
                 from{
