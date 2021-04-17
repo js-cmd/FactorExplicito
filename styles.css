@@ -44,14 +44,14 @@ body {
 .section-1 {
     position: relative;
     width: 100%;
-    height: 95rem;
+    height: 90rem;
 }
 .header-container {
     width: 100%;
     max-width: var(--maximum-width);
     height: 15rem;
     background-color: var(--primaryColor);
-    border-bottom: 2px solid var(--fifthColor);
+    border-bottom: 1px solid var(--fifthColor);
     position: fixed;
     z-index: 100;
 }
@@ -105,10 +105,6 @@ body {
     font-size: 2.8rem;
     letter-spacing: .2rem;
     margin-top: 2rem;
-    /*
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    */
     text-transform: uppercase;
     color: var(--secondaryColor);
     text-align: center;
@@ -209,7 +205,7 @@ nav a:hover::before {
 /*  this is the fade in text    */
 .banner {
     position: absolute;
-    top: 80%;
+    top: 60%;
     left: 20%;
     right: 20%;
 }
@@ -238,33 +234,17 @@ nav a:hover::before {
 /* about section styles   */
 .about {
     width: 100%;
-    height: 75rem;
-    position: relative;  
-    padding-top: 25vh;
+    height: 70rem;
 }
 #about {
-    width: 100%;
-    height: .1rem;
+   padding-top: 20rem;
 }
-/*
-.about::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(../images/bg-2.jpg);
-    filter: grayscale(100%);
-    z-index: -3;
-    opacity: .2;
-}
-*/
+
 .about-container {
     width: 70%;
     max-width: 900px;
-    height: 50vh;
-    margin: auto;
+    height: 70rem;
+    margin: auto;  
 }
 .head-line {
     margin-bottom: 5rem;
@@ -307,28 +287,13 @@ nav a:hover::before {
 
 /* the section-services styles  */
 #section-services {
-    margin-top: -20rem;
+    padding-top: 20rem;
 }
 .section-services {
     width: 100%;
     height: 80rem;
-    padding-top: 10rem;
     position: relative;
 }
-/*
-.section-services::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(../images/bg-2.jpg);
-    filter: grayscale(100%);
-    z-index: -3;
-    opacity: .2;
-}
-*/
 .services-container {
     width: 80%;
     margin: 0 auto;
@@ -487,7 +452,7 @@ nav a:hover::before {
 /* the contact section   */
 .contact-section {
     width: 100%;
-    height: 100rem;
+    height: 80rem;
 }
 
 /* the contact form starts here */
@@ -500,20 +465,6 @@ nav a:hover::before {
     align-items: center;
     flex-direction: column; 
 }
-/*
-.section-4::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -5rem;
-    background-image: url(../images/bg-2.jpg);
-    filter: grayscale(100%);
-    z-index: -3;
-    opacity: .2;
-}
-*/
 .contacts-container {
     width: 80%;
     max-width: 80rem;
@@ -522,10 +473,10 @@ nav a:hover::before {
     margin: 0 auto;   
 }
 .contact-section {
-    padding-top: 10vh;
+    padding-top: 0rem;
 }
 #contact-section {
-    margin-top: -5rem;
+   padding-top: 20rem;
 }
 .address,
 .phones,
@@ -554,20 +505,16 @@ nav a:hover::before {
     height: 1.2rem;
     margin-left: 1rem;
 }
-
 .contact-form-container {
     width: 80%;
     max-width: 80rem;
-    margin: 0 auto;
-   
+    margin: 0 auto;  
 }
-
 .inner-form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .contact-form-container h3 {
     text-align: left;
     font-family: 'Play', sans-serif;
@@ -578,7 +525,6 @@ nav a:hover::before {
     font-weight: 400;
     letter-spacing: .5rem;  
     text-transform: uppercase;
-  
 }
 .contact-form-container p {
     text-align: left;
@@ -590,12 +536,10 @@ nav a:hover::before {
     font-weight: 400;
     letter-spacing: .1rem; 
 }
-
 .form-group {
     width: 100%;
     margin-top: 1rem;
 }
-
 .form-group.space {
     width: 2rem;
 }
@@ -614,12 +558,10 @@ nav a:hover::before {
     font-size: 1.5rem;
     border-radius: .5rem;
 } 
-
 .form-group textarea {
     margin-bottom: 1rem;
     resize: none;
 }
-
 .form-group input:focus,
 .form-group textarea:focus {
     outline: 2px solid var(--fifthColor);
@@ -665,12 +607,10 @@ button[type="submit"] {
     text-shadow: 0 .1rem .2rem rgba(0, 0, 0, .4);
     transition: all .5s
 }
-
 button[type="submit"]:hover {
     background-image: linear-gradient(var(--fifthColor), var(--sixthColor));
     cursor: pointer;
 }
-
 #status {
     width: 90%;
     max-width: 50rem;
@@ -689,12 +629,10 @@ button[type="submit"]:hover {
     background-color: rgb(211,250,152);
     animation: status 4s ease forwards;
 }
-
 #status.error {
     background-color: rgb(250,129,92);
     animation: status 4s ease forwards;
 }
-
 @keyframes status {
     0% {
         opacity: 1;
@@ -717,7 +655,7 @@ button[type="submit"]:hover {
 
 .footer {
     width: 100%;
-    height: 12rem;
+    height: 10rem;
     background-color: var(--primaryColor);
     border-top: 2px solid var(--fifthColor);
 }
@@ -775,10 +713,10 @@ button[type="submit"]:hover {
                 font-size: 1.3rem;
             }
             .about {
-                height: 75rem;
+                height: 70rem;
             }
             #about {
-              margin-top: -20vh;
+              margin-top: -20rem;
             }
             .about-container {
                 height: 55rem;
@@ -788,7 +726,10 @@ button[type="submit"]:hover {
             }
             .section-services {
                 width: 100%;
-                height: 110vh;
+                height: 110rem;
+            }
+            #section-services {
+                margin-top: -20rem;
             }
             .services-container {
                 width: 90%;
@@ -797,15 +738,25 @@ button[type="submit"]:hover {
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 1rem 1rem;      
             }
+            .section-4 {
+                height: 80rem;
+            }
+            .contact-section {
+                height: 80rem;
+                padding-top: 0;
+            }
+            #contact-section {
+                margin-top: -10rem;
+            }
         }
        
          /*        1080 PX                                */
         @media only screen and (max-width: 1080px) {
             .about {
-                height: 75rem;
+                height: 70rem;
             }
             #about {
-              margin-top: -20vh;
+              margin-top: -15rem;
             }
             .about-container {
                 height: 50rem;
@@ -834,13 +785,16 @@ button[type="submit"]:hover {
         @media only screen and (max-width: 950px) {
 
             .about {
-                height: 75rem;
+                height: 80rem;
             }
             #about {
-              margin-top: -20vh;
+                 margin-top: -10rem;    
             }
             .header-container {
                 height: 20rem;
+            }
+            .header {
+                margin-bottom: 3rem;
             }
             .header h1 {
                 font-size: 2rem;
@@ -871,7 +825,7 @@ button[type="submit"]:hover {
                 margin-top: -23rem;
             }
             .section-services {
-                height: 125rem;
+                height: 110rem;
             }
             .services-container {
                 width: 90%;
@@ -883,6 +837,9 @@ button[type="submit"]:hover {
             .head-line h1{
                 margin-top: 0;
                 padding: 0;
+            }
+            .contact-section {
+                height: 80rem;
             }
             .section-4 {
                 height: 80rem;
@@ -904,6 +861,9 @@ button[type="submit"]:hover {
             .burger div {
                 background-color: var(--secondaryColor);
             }
+            .section-1 {
+                height: 90rem;
+            }
             .burger:hover div {
                 background-color: var(--fifthColor);
             }
@@ -923,7 +883,7 @@ button[type="submit"]:hover {
                 width: 100%;
                 transform: translateX(100%);
                 transition: transform 0.3s ease-in;
-                border-bottom: 3px solid var(--fifthColor);
+                border-bottom: 1px solid var(--fifthColor);
             }
              .nav-links li {
                  opacity: 0;  
@@ -983,24 +943,35 @@ button[type="submit"]:hover {
             .banner p {
                 font-size: 2.8rem;    
             }   
+
             .about {
                 width: 100%;
-                height: 85rem;
+                height: 80rem;
             }
-              .about-container {
-                height: 50rem;
-            }
-            .about .head-line h1 {
+            #about {
+                padding-top: -10rem;
+           }
+
+            .head-line h1 {
                 font-size: 2rem;
+            }
+            .about-container {
+                margin-top: 10rem;
             }
             .about-container p {
                 font-size: 1.3rem;
             }
-            .head-line h1 {
+            .head-line {
+                padding: 0;
+                margin: 0;
+            }
+            .about .head-line h1 {
                 font-size: 2rem;
+                padding-top: 0;
+                margin: 0 auto
             }
             #section-services {
-                margin-top: 10rem;
+                margin-top: -20rem;
             }
             .services-container {
                 width: 90%;
@@ -1011,22 +982,19 @@ button[type="submit"]:hover {
             }
             .section-services {
                 height: 125rem;
-                padding-top: 10vh;
+                padding-top: 7rem;
             }
             .services-container .service button {
                 letter-spacing: .1rem;
                 font-size: 1.3rem;
                 font-weight: 500;
             }
-            .contact-section {
-                padding-top: 5rem;
-            }
             .section-4 {
                 width: 100%;
                 height: 88rem;
             }
             #contact-section {
-                margin-top: 4rem;
+                margin-top: -8rem;
             }
             .contacts-container {
                 display: flex;
@@ -1094,7 +1062,7 @@ button[type="submit"]:hover {
         and (orientation: portrait)   { 
 
             .section-1 {
-                height: 95rem;
+                height: 90rem;
             }
             .header-container {
                 position:relative;
@@ -1145,7 +1113,7 @@ button[type="submit"]:hover {
                 width: 100%;
                 transform: translateX(100%);
                 transition: transform 0.3s ease-in;
-                border-bottom: 3px solid var(--fifthColor);
+                border-bottom: 1px solid var(--fifthColor);
             }
             
             .nav-links li a {
@@ -1165,6 +1133,7 @@ button[type="submit"]:hover {
                 }
             }   
             #img-wrapper {
+                height: 60rem;
                 animation: none;
             }
             .language a img {
@@ -1176,39 +1145,29 @@ button[type="submit"]:hover {
             }
             .about {
                 width: 100%;
-                height: 85rem; 
+                height: 80rem; 
                 margin-top: 0;
-                padding-top: 5rem;
+                padding-top: 0rem;
                 background-color: var(--secondaryColor);
             }
-            .about::after {
-                background-image: none;
-                background-color: var(--secondaryColor);
-            }
-            /*
-            .about-header {
-                height: 65rem;
-            }
-            */
             #about {
-              margin-top: -20vh;
+                padding-top: 10rem;
+                margin-top: -20rem;
             }
             .about-container {
-                height: 55rem;
-            }
-            #section-services {
-                margin-top: 20rem;
+                height: 60rem;
+                margin-top: 5rem;
             }
             .section-services {
                 width: 100%;
                 height: 230rem;
                 padding-top: 5rem;
                 background-color: var(--secondaryColor);
+            } 
+            #section-services {
+                padding-top: 20rem;
+                margin-top: -20rem;
             }
-            .section-services::after {
-                background-image: none;
-                background-color: var(--secondaryColor)
-            }  
             .services-container {
                 width: 90%;
                 height:210rem;
@@ -1269,19 +1228,16 @@ button[type="submit"]:hover {
                 width: 100%;
                 height: 90rem;
             }
-            .section-4::after {
-                background-image: none;
-                background-color: var(--secondaryColor);
-            }
             .contacts-container {
                 padding-top: 0;
-             
+            }
+            #contact-section {
+                padding-top: 10rem;
             }
             .inner-form {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                
+                justify-content: space-between;    
             }
             .form-group input,
             .form-group textarea {
@@ -1366,27 +1322,27 @@ button[type="submit"]:hover {
                 margin-top: 0;
                 padding-top: 5rem;
             }
+            #about {
+                padding-top: 0;
+            }
             .about-header {
                 width: 90%;
                 height: 55rem;  
                 margin: 0 auto;  
+              
             }
             .about-container {
                 width: 100%;
                 height: 35rem;
+                margin-top: 5rem;
             }
-            .about::after {
-                background-image: none;
-                background-color: var(--sixthColor);
-            }
-            .section-services::after {
-                background-image: none;
-                background-color: var(--secondaryColor)
-            } 
             .section-services {
                 width: 100%;
-                height: 125rem; 
+                height: 115rem; 
                 padding-top: 5rem; 
+            }
+            #section-services {
+                padding-top: 0;
             }
             .services-container {
                 width: 90%;
@@ -1451,16 +1407,15 @@ button[type="submit"]:hover {
             }
             .contact-section{
                 width: 100%;
-                height: 80rem;
+                height: 70rem;
+                padding-top: 0;
+            }
+            #contact-section {
                 padding-top: 0;
             }
             .section-4 {
                 width: 100%;
-                height: 80rem;
-            }
-            .section-4::after {
-                background-image: none;
-                background-color: var(--secondaryColor);
+                height: 70rem;
             }
             .contacts-container {
                 padding-top: 0;
