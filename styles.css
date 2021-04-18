@@ -729,6 +729,7 @@ button[type="submit"]:hover {
             }
             .about {
                 height: 70rem;
+                padding-top: 5rem;
             }
             #about {
               margin-top: -20rem;
@@ -1317,7 +1318,7 @@ button[type="submit"]:hover {
         /*    iphone XR, 11 media queries - landscape   */
         /************************************************/
         @media only screen
-        and (max-width: 800px)
+        and (max-width: 850px)
         and (orientation: landscape)    
         {
             body {
