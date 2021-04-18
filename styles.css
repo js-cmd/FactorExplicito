@@ -898,8 +898,8 @@ button[type="submit"]:hover {
             .nav-links {
                 position: absolute;
                 right: 0px;
-                height: 3rem;
-                top: 20rem;
+                height: 35rem;
+                top: 18rem;
                 background-color: var(--primaryColor);
                 display: flex;
                 flex-direction: row;
@@ -918,18 +918,7 @@ button[type="submit"]:hover {
                  color: var(--secondaryColor);
                 font-size: 1.2rem;
              }
-             nav { 
-                width: 35px;
-                display: flex;
-            }
-            nav li a {
-                opacity: 1;    
-             }
-             .header {
-                width: 80%;
-                margin: 1rem auto;
-            }
-            .nav-active {
+             .nav-active {
                 transform: translateX(0%);
                 display: block;
                 text-align: center;
@@ -943,7 +932,19 @@ button[type="submit"]:hover {
                     opacity: 1; 
                     transform: translateX(0px);
                 }
-            }   
+            }  
+            nav { 
+                width: 35px;
+                display: flex;
+            }
+            nav li a {
+                opacity: 1;    
+             }
+             .header {
+                width: 80%;
+                margin: 1rem auto;
+            }
+ 
             /* Toggle from lines to cross  */
                 .toggle .line1 {
                     transform: rotate(-45deg) translate(-5px, 6px);
@@ -955,7 +956,7 @@ button[type="submit"]:hover {
                     transform: rotate(45deg) translate(-5px, -6px);
             }
             .header-container {
-                height: 20rem;
+                height: 18rem;
             }
             .header h1 {
                 margin-top: 0;
@@ -1346,6 +1347,40 @@ button[type="submit"]:hover {
                 font-size: 1rem;
                 color: var(--secondaryColor);
             }
+            .nav-links {
+                position: absolute;
+                right: 0px;
+                height: 35rem;
+                top: 8rem;
+                background-color: var(--primaryColor);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                display: none;
+                width: 100%;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in;
+                border-bottom: 1px solid var(--fifthColor);
+            }
+             .nav-links li {
+                 opacity: 0;  
+                 margin-bottom: 4rem;
+             }
+             .nav-active {
+                transform: translateX(0%);
+                display: block;
+                text-align: center;
+            }
+            @keyframes navLinkFade {
+                from{
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1; 
+                    transform: translateX(0px);
+                }
+            }  
             #img-wrapper {
                 animation: none;
             }
