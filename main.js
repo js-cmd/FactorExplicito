@@ -102,17 +102,38 @@ function closeModal(modal) {
     overlay.classList.remove('active')
 }
 
+// new hamburger function !!!
+
+const burger = document.getElementById('burger');
+const navbar = document.getElementById('nav-links');
+
+document.onclick = function(e) {
+  if(e.target.id !== 'burger' && e.target.id !== 'navbar') {
+    burger.classList.remove('nav-active');
+    navbar.classList.remove('nav-active');
+    burger.classList.toggle('toggle');
+  }
+}
+
+burger.onclick = function()
+{
+  burger.classList.toggle('nav-active');
+  navbar.classList.toggle('nav-active');
+  burger.classList.toggle('toggle');
+}
+
+/*
 // Navigation and Hamburger
 const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
   // toggle nav slider
-  burger.addEventListener('click', () => {
+      burger.addEventListener('click', () => {
       nav.classList.toggle('nav-active');
 
       // animate the nav links
-      navLinks.forEach((link, index) => {
+          navLinks.forEach((link, index) => {
           if(link.style.animation) {
             // closes the menu
               link.style.animation = '';    
@@ -129,3 +150,4 @@ const navSlide = () => {
 
 navSlide();
 // end of Navigation and Hamburger
+*/

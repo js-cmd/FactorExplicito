@@ -10,7 +10,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
   />
     <link rel="stylesheet" href="../styles.css">
-    <link rel="shortcut icon" href="../icons/target.ico">
+    <link rel="shortcut icon" href="../images/target.ico">
 </head>
 <body>
     <!--this is the home page and navigation .....  (section-1)-->
@@ -26,10 +26,10 @@
                 </div>
         
                 <div class="language">
-                    <a href="../index.html"><img src="../icons/uk.png" alt=""></a>
-                    <a href="../it/it.html"><img src="../icons/italy.png" alt=""></a>
-                    <a href="../ru/ru.html"><img src="../icons/russia.png" alt=""></a>
-                    <a href="../pt/pt.html"><img src="../icons/portugal.png" alt=""></a>
+                    <a href="../index.html"><img src="../images/uk.png" alt=""></a>
+                    <a href="../it/it.html"><img src="../images/italy.png" alt=""></a>
+                    <a href="../ru/ru.html"><img src="../images/russia.png" alt=""></a>
+                    <a href="../pt/pt.html"><img src="../images/portugal.png" alt=""></a>
                 </div>
             </div>
             <div class="nav-container">
@@ -48,7 +48,7 @@
                 </nav>
             </div>    
                     <!-- The Hamburger Menu Here !!!!!-->
-                    <div class="burger">
+                    <div class="burger" id="burger">
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="line3"></div>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="service-3 service">
                     <img src="../images/handshake-5.jpg" alt="">
-                    <button title="MORE INFORMATION" data-modal-target="#modal3">Registro das empresas</br> no Centro Internacional</br> de Negócios da Madeira</button>
+                    <button title="MORE INFORMATION" data-modal-target="#modal3">Registo das empresas</br> no Centro Internacional</br> de Negócios da Madeira</button>
                 </div>
                 <div class="service-4 service">
                     <img src="../images/4444.jpeg" alt="">
@@ -169,7 +169,7 @@
                 </p>
                     </br>
                 <p>
-                    2) Registro de empresas
+                    2) Registo de empresas
                     (inclusive sem a presença do cliente)</br>
                     - Registo de empresas em Portugal</br>
                     - Registo de empresa na Zona do Franco na Madeira</br>
@@ -343,9 +343,9 @@
                     </div>
                     <div class="phones">
                         <h2>Telefones</h2>
-                        <h3 id="phone-1">+351-918 215 921<span><img id="img-1" src="../icons/uk.png" alt=""></span><span><img src="../icons/italy.png" alt=""></span><span><img src="../icons/france.png" alt=""></span><span><img src="../icons/portugal.png" alt=""></span></h3>
-                        <h3 id="phone-2">+351-963 357 665<span><img src="../icons/portugal.png" alt=""></span><span><img src="../icons/russia.png" alt=""></span></h3>
-                        <h3 id="phone-3">+351-935 853 356<span><img src="../icons/russia.png" alt=""></span></h3>
+                        <h3 id="phone-1">+351-918 215 921<span><img id="img-1" src="../images/uk.png" alt=""></span><span><img src="../images/italy.png" alt=""></span><span><img src="../images/france.png" alt=""></span><span><img src="../images/portugal.png" alt=""></span></h3>
+                        <h3 id="phone-2">+351-963 357 665<span><img src="../images/portugal.png" alt=""></span><span><img src="../images/russia.png" alt=""></span></h3>
+                        <h3 id="phone-3">+351-935 853 356<span><img src="../images/russia.png" alt=""></span></h3>
                     </div>
                     <div class="email">
                         <h2>E-mail</h2>
@@ -360,7 +360,7 @@
                 
                 <form action=https://formspree.io/f/xnqolvbg" method="POST" id="my-form">   <!--hier muss der emailserver eingegeben werden !!!!! -->
                     <h3>Formulário de Contato</h3>
-                    <p>Se desejar entrar em contato conosco, você pode usar os contatos acima ou pode usar o formulário de contato abaixo. </br>Obrigado por nos escolher.</p>
+                    <p>Se desejar entrar em contato connosco, você pode usar os contatos acima ou pode usar o formulário de contato abaixo. </br>Obrigado por nos escolher.</p>
                     <div class="inner-form">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
@@ -382,7 +382,7 @@
                         <label for="email">Message</label>
                         <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensagem"></textarea>
                     </div>
-                    <button type="clear" id="btnClear" onclick="clearInputFields()">Redefinir</button>
+                  <!-- <button type="clear" id="btnClear" onclick="clearInputFields()">Redefinir</button>--> 
                     <button type="submit">Enviar</button>
 
                 </form>

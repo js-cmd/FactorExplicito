@@ -10,10 +10,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
   />
     <link rel="stylesheet" href="./styles.css">
-    <link rel="shortcut icon" href="../icons/target.ico">
+    <link rel="shortcut icon" href="./images/target.ico">
 </head>
 <body>
-
+    <div class="bodywrapper">
     <div class="main-container">
         <!--this is the home page and navigation .....  (section-1)-->
         <section class="section-1">
@@ -27,10 +27,10 @@
                     </div>
             
                     <div class="language">
-                        <a href="./index.html"><img src="./icons/uk.png" alt=""></a>
-                        <a href="./it/it.html"><img src="./icons/italy.png" alt=""></a>
-                        <a href="./ru/ru.html"><img src="./icons/russia.png" alt=""></a>
-                        <a href="./pt/pt.html"><img src="./icons/portugal.png" alt=""></a>
+                        <a href="./index.html"><img src="./images/uk.png" alt="EN"></a>
+                        <a href="./it/it.html"><img src="./images/italy.png" alt="IT"></a>
+                        <a href="./ru/ru.html"><img src="./images/russia.png" alt="RU"></a>
+                        <a href="./pt/pt.html"><img src="./images/portugal.png" alt="PT"></a>
                     </div>
                 </div>
                 <div class="nav-container">
@@ -39,7 +39,7 @@
                         <h2>SERVIÇOS DE CONSULTORIA E INVESTIMENTOS</h2>
                     </div>
                     <nav>
-                        <ul class="nav-links">
+                        <ul class="nav-links" id="nav-links">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#section-services">Services</a></li>
@@ -50,7 +50,7 @@
 
                 </div> 
                         <!-- The Hamburger Menu Here !!!!!-->
-                        <div class="burger">
+                        <div class="burger" id="burger">
                             <div class="line1"></div>
                             <div class="line2"></div>
                             <div class="line3"></div>
@@ -67,7 +67,7 @@
             <!-- end of the fade in text -->
   
         </section>
-        <!--end of home page and navigation ..... (section-1--
+        <!--end of home page and navigation ..... (section-1-->
       
         <!-- The about section starts here  -->
         <section  class="about">         
@@ -350,9 +350,9 @@
                     </div>
                     <div class="phones">
                         <h2>Phones</h2>
-                        <h3 id="phone-1">+351-918 215 921<span><img id="img-1" src="../icons/uk.png" alt=""></span><span><img src="../icons/italy.png" alt=""></span><span><img src="../icons/france.png" alt=""></span><span><img src="../icons/portugal.png" alt=""></span></h3>
-                        <h3 id="phone-2">+351-963 357 665<span><img src="../icons/portugal.png" alt=""></span><span><img src="../icons/russia.png" alt=""></span></h3>
-                        <h3 id="phone-3">+351-935 853 356<span><img src="../icons/russia.png" alt=""></span></h3>
+                        <h3 id="phone-1">+351-918 215 921<span><img id="img-1" src="./images/uk.png" alt=""></span><span><img src="./images/italy.png" alt=""></span><span><img src="./images/france.png" alt=""></span><span><img src="./images/portugal.png" alt=""></span></h3>
+                        <h3 id="phone-2">+351-963 357 665<span><img src="./images/portugal.png" alt=""></span><span><img src="./images/russia.png" alt=""></span></h3>
+                        <h3 id="phone-3">+351-935 853 356<span><img src="./images/russia.png" alt=""></span></h3>
                     </div>
                     <div class="email">
                         <h2>E-mail</h2>
@@ -389,7 +389,7 @@
                                 <label for="email">Message</label>
                                 <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
                             </div>
-                            <button type="clear" id="btnClear" onclick="clearInputFields()">Clear</button>
+                          <!-- <button type="clear" id="btnClear" onclick="clearInputFields()">Clear</button>--> 
                             <button type="submit">Submit</button>
                         </form>
                     </div>
@@ -408,7 +408,8 @@
         <!-- the scroll up button -->
         <a href="#" class="scroll-btn"><i class="fas fa-arrow-up"></i></a>
        <!-- <script src="../jquery-3.5.1.min.js"></script> -->
-        <script src="./main.js"></script> 
+        <script src="main.js"></script> 
     </div>
+</div>
 </body>
 </html>
